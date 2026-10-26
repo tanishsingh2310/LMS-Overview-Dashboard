@@ -88,7 +88,6 @@
 .table-search input { width: 100%; min-width: 0; min-height: 42px; padding: 9px 12px; border: 1px solid var(--ud-border); border-radius: 8px; background: var(--ud-surface); color: inherit; font: inherit; }
 .filter-select select, .table-toolbar select { min-height: 42px; max-width: 100%; padding: 8px 11px; border: 1px solid var(--ud-border); border-radius: 8px; background: var(--ud-surface); color: inherit; font: inherit; }
 .reset-filters-button { display: inline-flex; align-items: center; justify-content: center; gap: 7px; min-height: 42px; padding: 8px 12px; border: 1px solid var(--ud-border); border-radius: 8px; background: var(--ud-surface); color: inherit; font: inherit; font-size: 13px; cursor: pointer; }
-.reset-filters-button:hover { background: #f1f5f9; }
 
 .course-table-wrapper { width: 100%; overflow-x: auto; border: 1px solid var(--ud-border); border-radius: 12px; background: var(--ud-surface); }
 .course-table { width: 100%; border-collapse: collapse; text-align: left; font-size: 13px; }
@@ -105,7 +104,6 @@
 .pagination-info { color: var(--ud-muted); font-size: 13px; }
 .pagination-controls { display: flex; align-items: center; flex-wrap: wrap; gap: 10px; color: var(--ud-muted); font-size: 13px; }
 .pagination-button { min-height: 36px; padding: 7px 12px; border: 1px solid var(--ud-border); border-radius: 7px; background: var(--ud-surface); color: var(--ud-text); font: inherit; cursor: pointer; }
-.pagination-button:hover:not(:disabled) { background: #eff6ff; }
 .pagination-button:disabled { opacity: 0.45; cursor: not-allowed; }
 
 .status-badge { display: inline-flex; align-items: center; gap: 7px; white-space: nowrap; font-size: 12px; font-weight: 600; }
@@ -315,14 +313,13 @@
   border-radius: 9px;
   transition: background 140ms ease, border-color 140ms ease, transform 140ms ease;
 }
-.reset-filters-button:hover, .pagination-button:hover:not(:disabled) { border-color: #c4d1f2; background: #f2f6ff; }
+
 .course-table-wrapper { overflow: auto; }
 .course-table { border-collapse: separate; border-spacing: 0; }
 .course-table thead th {
   position: static;
   padding: 0;
   border-bottom: 1px solid #dfe6f1;
-  background: #edf2fa;
   color: #34435f;
   font-size: 12px;
   font-weight: 750;
