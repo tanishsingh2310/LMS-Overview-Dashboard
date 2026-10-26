@@ -821,16 +821,22 @@ class dashboard_service
      * @return \stdClass|null
      */
     private function get_school_category(string $name): ?\stdClass
-    {
-        $category = $this->db->get_record(
-            'course_categories',
-            ['name' => $name, 'parent' => 0],
-            '*',
-            IGNORE_MISSING
-        );
+{
+    $name = html_entity_decode(
+        $name,
+        ENT_QUOTES | ENT_HTML5,
+        'UTF-8'
+    );
 
-        return $category ?: null;
-    }
+    $category = $this->db->get_record(
+        'course_categories',
+        ['name' => $name, 'parent' => 0],
+        '*',
+        IGNORE_MISSING
+    );
+
+    return $category ?: null;
+}
 
     /**
      * Find the category for an institution profile value.
@@ -967,7 +973,14 @@ class dashboard_service
                 break;
             }
 
-            array_unshift($parts, format_string($category->name));
+            array_unshift(
+    $parts,
+    html_entity_decode(
+        format_string($category->name),
+        ENT_QUOTES | ENT_HTML5,
+        'UTF-8'
+    )
+);
             $currentid = (int) $category->parent;
         }
 
